@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --dark: #000000dc;
+  --light: #fff;
+  --blue: #29a8ff;
+  --btn: #303136;
+  --fontblue: ##313435;
+  --bgColor: #2f2f2f;
+  --shadow: rgb(0, 0, 0) 0px 25px 25px -9px;
+  --opColor: #54b562;
+}
+body {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  padding-top: 50px;
+  background-color: var(--bgColor);
+  height: 80vh;
+  width: 50vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px 10px;
+}
+.container h2 {
+  font-size: 3rem;
+  color: var(--light);
+}
+.view {
+  color: var(--light);
+  height: 3rem;
+  font-size: 18pt;
+  width: 70%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+span.op-span,
+.display-screen {
+  color: var(--opColor);
+}
+.nbr1,
+.nbr2,
+.op {
+  font-size: 25px;
+  font-weight: bold;
+}
+p {
+  display: inline-block;
+}
+button.op {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  font-size: 20px;
+  background-color: var(--opColor) !important;
+  color: var(--light) !important;
+}
+.button {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+}
+button:hover {
+  background-color: white;
+}
+.calcul {
+  padding: 2px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  height: 100%;
+}
+.button button {
+  color: var(--fontblue);
+  font-size: 25px;
+  font-weight: bold;
+  background-color: var(--light);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.egal {
+  grid-column: 3/5 !important;
+  background-color: var(--opColor);
+  color: white;
+  border-radius: 25px 25px;
+  width: 150px;
+}
+button.del,
+button.ac {
+  color: var(--light);
+  background-color: var(--opColor);
+}
