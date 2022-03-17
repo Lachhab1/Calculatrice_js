@@ -1,4 +1,4 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap") * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,23 +9,30 @@
   --light: #fff;
   --blue: #29a8ff;
   --btn: #303136;
-  --fontblue: ##313435;
-  --bgColor: #2f2f2f;
+  --fontblue: #313435;
+  --bgColor: #2f2f2f50;
   --shadow: rgb(0, 0, 0) 0px 25px 25px -9px;
   --opColor: #54b562;
 }
 body {
-  background-color: var(--dark);
+  background: url("../images/valeria-nikitina-tGnJnNRtohQ-unsplash.jpg");
+  background-position: center;
+  object-fit: cover;
+  font-family: "Roboto", sans-serif;
+  background-size: cover;
+  backdrop-filter: blur(5px) invert(70%) opacity(30%);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 .container {
   padding-top: 50px;
   background-color: var(--bgColor);
   height: 80vh;
   width: 50vh;
+  padding: 2rem 0;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -35,7 +42,9 @@ body {
 }
 .container h2 {
   font-size: 3rem;
-  color: var(--light);
+  color: lightyellow;
+  font-weight: bold;
+  letter-spacing: 1ch;
 }
 .view {
   color: var(--light);
