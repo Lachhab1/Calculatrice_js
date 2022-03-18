@@ -7,6 +7,11 @@ let nbr2 = document.querySelector('.nbr2');
 let affichage = document.querySelector('.display-screen');
 let del = document.querySelector('.del');
 let result = 0;
+// clear variables 
+    nbr1.innerHTML = "0";
+    nbr2.innerHTML = "";
+    op.innerHTML = "";
+    affichage.innerHTML = "";
 
 function somme(nbr1,nbr2){
     return nbr1 + nbr2;
@@ -81,9 +86,9 @@ operation.forEach(value => {
             else{
                 result = operate(+(nbr1.innerHTML),+(nbr2.innerHTML));
                 affichage.innerHTML = result;
-                document.querySelector('.nbr1').innerHTML = "";
-                document.querySelector('.nbr2').innerHTML = "";
-                document.querySelector('.op').innerHTML = "";
+                nbr1.innerHTML = "";
+                nbr2.innerHTML = "";
+                op.innerHTML = "+";
                 nbr1.innerHTML = result;
                 op.innerHTML = value.innerHTML;
             }
@@ -122,7 +127,9 @@ del.addEventListener("click",function(){
         nbr2.innerHTML = nbr2.innerHTML.slice(0,-1);
     }
     else if(nbr2.innerHTML == "" && op.innerHTML != ""){
+        console.log(op.innerHTML);
         op.innerHTML = op.innerHTML.slice(0,-1);
+        console.log(op.innerHTML);
     }
     else if(op.innerHTML == "" && nbr2.innerHTML == ""){
         nbr1.innerHTML = nbr1.innerHTML.slice(0,-1);  
